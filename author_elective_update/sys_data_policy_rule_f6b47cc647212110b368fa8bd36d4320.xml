@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule">
+    <sys_data_policy_rule action="DELETE">
+        <disabled>ignore</disabled>
+        <field>u_request_type</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_data_policy_rule</sys_class_name>
+        <sys_created_by>jaik500</sys_created_by>
+        <sys_created_on>2023-03-14 10:39:11</sys_created_on>
+        <sys_data_policy display_value="Learning Data Policy">4a2434c647212110b368fa8bd36d4358</sys_data_policy>
+        <sys_id>f6b47cc647212110b368fa8bd36d4320</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_request_type</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_data_policy_rule_f6b47cc647212110b368fa8bd36d4320</sys_update_name>
+        <sys_updated_by>jaik500</sys_updated_by>
+        <sys_updated_on>2023-03-14 10:39:11</sys_updated_on>
+        <table>x_58872_needit_needit</table>
+    </sys_data_policy_rule>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>387e13aedb5b17c00e785d00cf9619bc</instance_id>
+        <instance_name>dev65585</instance_name>
+        <name>sys_data_policy_rule_f6b47cc647212110b368fa8bd36d4320</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule"><sys_data_policy_rule action="INSERT_OR_UPDATE"><disabled>ignore</disabled><field>u_request_type</field><mandatory>true</mandatory><sys_class_name>sys_data_policy_rule</sys_class_name><sys_created_by>jaik500</sys_created_by><sys_created_on>2023-03-14 10:39:11</sys_created_on><sys_data_policy display_value="Learning Data Policy">4a2434c647212110b368fa8bd36d4358</sys_data_policy><sys_id>f6b47cc647212110b368fa8bd36d4320</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_request_type</sys_name><sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package><sys_policy/><sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope><sys_update_name>sys_data_policy_rule_f6b47cc647212110b368fa8bd36d4320</sys_update_name><sys_updated_by>jaik500</sys_updated_by><sys_updated_on>2023-03-14 10:39:11</sys_updated_on><table>x_58872_needit_needit</table></sys_data_policy_rule></record_update>]]></payload>
+        <payload_hash>-415017644</payload_hash>
+        <record_name>u_request_type</record_name>
+        <reverted_from/>
+        <source>a68d402847e56110b368fa8bd36d4348</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jaik500</sys_created_by>
+        <sys_created_on>2023-03-14 10:39:11</sys_created_on>
+        <sys_id>4305788647212110b368fa8bd36d43c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>186dfb3db170000001</sys_recorded_at>
+        <sys_updated_by>jaik500</sys_updated_by>
+        <sys_updated_on>2023-03-14 10:39:11</sys_updated_on>
+        <type>Data Policy Rule</type>
+        <update_guid>8b0578867b212110f2a283ee49dc61c1</update_guid>
+        <update_guid_history>8b0578867b212110f2a283ee49dc61c1:-415017644</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jaik500</sys_created_by>
+        <sys_created_on>2023-03-14 10:42:20</sys_created_on>
+        <sys_db_object display_value="" name="sys_data_policy_rule">sys_data_policy_rule</sys_db_object>
+        <sys_id>4ea2205c23d84170bffaaaec7038e900</sys_id>
+        <sys_metadata>f6b47cc647212110b368fa8bd36d4320</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_request_type</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent display_value="NeedIt State set to Withdrawn">4a2434c647212110b368fa8bd36d4358</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>sys_data_policy_rule_f6b47cc647212110b368fa8bd36d4320</sys_update_name>
+        <sys_update_version display_value="sys_data_policy_rule_f6b47cc647212110b368fa8bd36d4320">4305788647212110b368fa8bd36d43c2</sys_update_version>
+        <sys_updated_by>jaik500</sys_updated_by>
+        <sys_updated_on>2023-03-14 10:42:20</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
