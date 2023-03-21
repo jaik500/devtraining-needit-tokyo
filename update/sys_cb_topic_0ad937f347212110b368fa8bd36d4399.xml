@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="09ff3d105f231000b12e3572f2b4775d" table="sys_cb_topic">
+    <sys_cb_topic action="INSERT_OR_UPDATE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <autopilot_topic>false</autopilot_topic>
+        <category/>
+        <channels/>
+        <connect_queue/>
+        <description>Presents a greeting to the user at the beginning of a conversation.</description>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <graph>{"graph_api_version":"1.0.41","variables":{"3abcbd2be1e2447cb175f861ab42e917":{"id":"3abcbd2be1e2447cb175f861ab42e917","value":{"mode":"simple","value":""},"name":"greeting_message","label":"greeting_message","varType":"script","category":"vaVars"},"f683e0c75d7847a68860dfb687656c23":{"category":"vaInputs","id":"f683e0c75d7847a68860dfb687656c23","label":"User","name":"user","table":"sys_user","varType":"reference"}},"goals":{"primary":{"id":"primary","trigger":{"type":"primary"},"name":"primary","applicability":"","description":"","nodes":{"6a7bfc35fab44435bea2001335193836":{"id":"6a7bfc35fab44435bea2001335193836","stepType":"Start","name":"Start","greetingResponse":{"value":"","mode":"simple"}},"84e43de38ebb4da5881f36fd86bdc0f0":{"id":"84e43de38ebb4da5881f36fd86bdc0f0","stepType":"TerminateGoal","name":"End","confirmationMessage":{"mode":"simple","value":""}},"f60d8c7a7f764d97b693270409a09892":{"id":"f60d8c7a7f764d97b693270409a09892","stepType":"TextOutput","name":"Show Greeting Message","value":[{"value":[{"type":"paragraph","children":[{"text":""},{"type":"datapill","dataPill":{"value":"{{vaVars.greeting_message}}","displayValue":"vaVars➛greeting_message"},"children":[{"text":""}]},{"text":""}]}],"mode":"simple"}],"applicability":{"mode":"script","value":""},"secure":false},"7dfa897b163d4b678eb87e3ebd0c78bc":{"id":"7dfa897b163d4b678eb87e3ebd0c78bc","name":"Get Greeting Message","script":"(function execute() {\n    vaVars.greeting_message = vaSystem.getGreetingMessage();\n})()\n","stepType":"ScriptAction","applicability":{"mode":"script","value":""}},"cfd3c15a32ff401485353b1946151086":{"id":"cfd3c15a32ff401485353b1946151086","name":"Send Topic Picker","script":"(function execute() {\n    var greetingMessage = vaSystem.getTopicSelectionMessage();\n    vaSystem.sendTopicPickerControl(greetingMessage);\n})()\n","stepType":"ScriptAction","applicability":{"mode":"query","value":""}},"d710d73febce4261915df9084b6978a7":{"id":"d710d73febce4261915df9084b6978a7","stepType":"Decision","name":"Decision"},"94004db950a044bb803996c810582c85":{"id":"94004db950a044bb803996c810582c85","stepType":"Decision","name":"Decision"},"03e3496c55574689bab8a71398aaa8f0":{"id":"03e3496c55574689bab8a71398aaa8f0","name":"Topic Discovery","script":"(function execute() {\n    vaSystem.topicDiscovery();\n})()\n","stepType":"ScriptAction","applicability":{"value":"","mode":"query"}}},"edges":[{"id":"32875007008647c7b23b821dac3b9802","edgeType":"Edge","source":"7dfa897b163d4b678eb87e3ebd0c78bc","target":"f60d8c7a7f764d97b693270409a09892","sourcePort":"","targetPort":""},{"id":"23d877de2ce142f68212d6335a5eb527","edgeType":"Edge","source":"f60d8c7a7f764d97b693270409a09892","target":"cfd3c15a32ff401485353b1946151086","sourcePort":"","targetPort":""},{"id":"d8495e6fb0b040668c1d1defe9f71e48","edgeType":"Edge","source":"cfd3c15a32ff401485353b1946151086","target":"84e43de38ebb4da5881f36fd86bdc0f0","sourcePort":"","targetPort":""},{"id":"1aa8bf683aec433b83d8e5b752a68c3b","edgeType":"Edge","source":"6a7bfc35fab44435bea2001335193836","target":"d710d73febce4261915df9084b6978a7","sourcePort":"","targetPort":""},{"id":"047e2cdf83d54d2eaf91366ce7158e78","edgeType":"Branch","source":"d710d73febce4261915df9084b6978a7","target":"94004db950a044bb803996c810582c85","sourcePort":"","targetPort":"","expression":{"mode":"script","value":"(function execute() {\n    return gs.nil(vaVars.global_search_text)\n})()\n"},"label":"Search Text Not Set"},{"id":"8d0347cf6c8f4665b1f56a4502c84e55","edgeType":"Branch","source":"94004db950a044bb803996c810582c85","target":"7dfa897b163d4b678eb87e3ebd0c78bc","sourcePort":"","targetPort":"","expression":{"mode":"script","value":"(function execute() {\n    return !vaVars.global_preChatExecuted;\n})()\n"},"label":"Pre-chat not executed"},{"id":"6527e7fa406c452e9bfd7b194caab207","edgeType":"Branch","source":"94004db950a044bb803996c810582c85","target":"cfd3c15a32ff401485353b1946151086","sourcePort":"","targetPort":"","expression":{"mode":"script","value":"(function execute() {\n    return vaVars.global_preChatExecuted;\n})()\n"},"label":"Pre-chat executed"},{"id":"32fee04152904cefb29b1ad3fc9161fb","edgeType":"Branch","source":"d710d73febce4261915df9084b6978a7","target":"03e3496c55574689bab8a71398aaa8f0","sourcePort":"","targetPort":"","expression":{"mode":"script","value":"(function execute() {\n    return !gs.nil(vaVars.global_search_text)\n})()\n"},"label":"Search Text Set"},{"id":"85e4d17f89294b46afca073beeb2a158","edgeType":"Edge","source":"03e3496c55574689bab8a71398aaa8f0","target":"84e43de38ebb4da5881f36fd86bdc0f0","sourcePort":"","targetPort":""}]}}}</graph>
+        <key_phrases>Greeting users,Greetings</key_phrases>
+        <library>false</library>
+        <live_agent>false</live_agent>
+        <name>Greeting users</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <roles>public</roles>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <source_topic_id>120e685053130010cf8cddeeff7b12ab</source_topic_id>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>jaik500</sys_created_by>
+        <sys_created_on>2023-03-20 11:28:21</sys_created_on>
+        <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+        <sys_domain_path>!!!/!!!/</sys_domain_path>
+        <sys_id>0ad937f347212110b368fa8bd36d4399</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Greeting users</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_cb_topic_0ad937f347212110b368fa8bd36d4399</sys_update_name>
+        <sys_updated_by>jaik500</sys_updated_by>
+        <sys_updated_on>2023-03-20 11:28:21</sys_updated_on>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>SETUP_TOPIC</type>
+        <variables/>
+    </sys_cb_topic>
+    <sys_variable_value action="delete_multiple" query="document_key=0ad937f347212110b368fa8bd36d4399"/>
+</record_update>
